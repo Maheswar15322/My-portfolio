@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Outfit',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+    overflow-x:hidden;
+    background: linear-gradient(
+        -45deg,
+        #0f0c29,
+        #302b63,
+        #24243e,
+        #000000
+    );
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+}
+
+@keyframes bgAnimation{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+
+
+
+
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:90%;
+  max-width:1400px;
+  margin:auto;
+}
+
+/* Tablet */
+@media (max-width:1024px){
+
+  h1{
+    font-size:90%;
+  }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+
+  section{
+    scroll-margin-top:80px;
+  }
+
+}

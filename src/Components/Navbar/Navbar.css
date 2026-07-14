@@ -1,0 +1,225 @@
+/* .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 150px;
+}
+.logo-img{
+    height: 30px;
+}
+.nav-menu{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    gap:60px;
+    font-size: 20px;
+}
+.nav-connect{
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DE7C25, #B923E1);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.nav-connect:hover{
+    transform: scale(1.1);
+} */
+
+.navbar {
+  width: 90%;
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 18px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+
+  position: sticky;
+  top: 15px;
+  z-index: 1000;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+}
+
+.logo-img {
+  height: 45px;
+  transition: 0.4s;
+}
+
+.logo-img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #b415ff;
+  transition: 0.4s;
+}
+
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+.nav-connect {
+  padding: 14px 28px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #9d50ff);
+
+  cursor: pointer;
+  transition: 0.4s;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-connect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(180, 21, 255, 0.4);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 20px;
+    position: relative;
+  }
+
+  .nav-menu {
+    gap: 25px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .navbar{
+    position:relative;
+    padding:15px 20px;
+  }
+
+  .menu-icon{
+    display:block;
+  }
+
+  .nav-connect{
+    display:none;
+  }
+
+  .nav-menu{
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:25px;
+
+    padding:30px 20px;
+
+    background:rgba(15,12,41,.98);
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-20px);
+
+    transition:.35s ease;
+  }
+
+  .nav-menu.active{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(10px);
+  }
+
+  .nav-menu li{
+    font-size:18px;
+  }
+
+  .mobile-btn{
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+      90deg,
+      #ff8a00,
+      #e52e71,
+      #9d50ff
+    );
+  }
+
+}
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+  .navbar {
+    position: relative;
+  }
+
+  .logo-img {
+    height: 38px;
+  }
+
+  .nav-menu {
+    gap: 12px;
+  }
+
+  .nav-menu li {
+    font-size: 10px;
+  }
+}
